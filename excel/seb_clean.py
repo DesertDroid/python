@@ -34,7 +34,7 @@ df = pd.read_excel(locationFile, sheetname="sr.seb", skiprows=3)
 del df['Unnamed: 0']
 # remove last row
 df = df[:-1]
-# rename Total column
+# rename columns
 df.rename(columns={'kod':'pr_kod', 'Total':'ed_seb'}, inplace=True)
 # add two columns based on periods
 df = df.assign(year=year, month=month)
